@@ -1,0 +1,12 @@
+<p>You search for :<strong>{{q}}</strong></p>
+
+{% if posts %}
+	<p>Found{{posts|length}}blogs:</p>
+	<ul>
+		{% for post in posts %}
+		<li>{{post.title}}</li>
+		{% endfor %}
+	</ul>
+{% else %}
+	<p>No blogs matched your search criteria.</p>
+{% endif %}
